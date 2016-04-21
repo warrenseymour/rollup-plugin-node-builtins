@@ -1,5 +1,5 @@
 {
-  "name": "rollup-plugin-node-builtins",
+  "name": "@warrenseymour/rollup-plugin-node-builtins",
   "version": "1.0.4",
   "description": "use node builtins in browser with rollup",
   "main": "dist/rollup-plugin-node-builtins.cjs.js",
@@ -9,7 +9,7 @@
     "pretest": "npm run build",
     "build": "rollup -c -f cjs -o dist/rollup-plugin-node-builtins.cjs.js && rollup -c -f es6 -o dist/rollup-plugin-node-builtins.es6.js",
     "prebuild": "rm -rf dist && mkdir dist",
-    "postinstall": "npm run build"
+    "prepublish": "npm run build"
   },
   "keywords": [
     "rollup-plugin"
